@@ -8,6 +8,7 @@ var  createCompany =  function (req,res) {
         companiesService
             .companyMapping(req.body)
             .then(function(company){
+                console.log('company', req.body)
                 companiesRepository
                     .create(company)
                     .then(function(data){
@@ -24,6 +25,7 @@ var  createCompany =  function (req,res) {
     }
 
 var findAll = function (req,res) {
+    console.log('aqui')
      companiesRepository
         .findAll()
         .then(function(data){

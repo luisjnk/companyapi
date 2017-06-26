@@ -1,5 +1,5 @@
 "use strict";
-var config = require('../config/config.json')[process.env.NODE_ENV || 'development'];
+var config = require('../config/config.json')[process.env.enviroment || 'development'];
 //var logger = require('../util/log.js').logger;
 var fs        = require("fs");
 var path      = require("path");

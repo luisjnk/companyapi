@@ -19,11 +19,12 @@ module.exports = {
 
         //Owners
         app.post('/api/owners/create', owners.createOwner);
+        app.get('/api/owners/:companyId', owners.findOwnersByCompanyId);
 
         //Companies
         app.post('/api/companies/create', companies.createCompany);
         app.get('/api/companies/findall', companies.findAll);
-        app.get('/api/companies/findCompany/:Id', companies.findCompany);
+        app.get('/api/companies/:Id', companies.findCompany);
         app.post('/api/companies/update', companies.updateCompany);
 
         return app;
